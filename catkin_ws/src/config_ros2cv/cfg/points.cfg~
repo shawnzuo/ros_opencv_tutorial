@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+PACKAGE = "config_ros2cv"
+
+from dynamic_reconfigure.parameter_generator_catkin import *
+
+gen = ParameterGenerator()
+
+gen.add("x1", int_t, 0, "An Interger parameter", 100,  1, 319)
+gen.add("x2", int_t, 0, "An Interger parameter", 270, 1, 319)
+gen.add("y1", int_t, 0, "An Interger parameter", 50,  1, 239)
+gen.add("y2", int_t, 0, "An Interger parameter", 190, 1, 239)
+
+
+exit(gen.generate(PACKAGE, "ros2cv", "points"))
